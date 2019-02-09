@@ -1,24 +1,39 @@
 // Import libraries for making a component
 import React from 'react';
 import { Text, View } from 'react-native';
-// view tag is used to position/style elements in reactnative
+// view tag is used to position/style elements(ex. text) in reactnative
 
 // Make a component
-const Header = () => {
+const Header = (props) => {
     const { textStyle, viewStyle } = styles;
     return (
         <View style={viewStyle}>
-            <Text style={textStyle}>Albums!</Text>
+            <Text style={textStyle}>{props.headerText}</Text>
         </View>
     );
 };
 
+// flexbox: used on positioning of elements in a container (ex. view)
+    // in our case, how to place the text tag to the overall view tag
+    // properties: 'flex-start','center,'flex-end'
+    // justifyContent: vertical position (top to bottom)
+    // alignItems: horizontal position (left to right)
+
 const styles = {
     viewStyle: {
-        backgroundColor: '#F8F8F8'
+        backgroundColor: '#F8F8F8',
+        justifyContent: 'center',
+        alignItems: 'center',
+        height: 60, // pixel value
+        paddingTop: 15,
+        shadowColor: '#000',
+        shadowOffset: {width: 0, height: 3},
+        shadowOpacity: 0.2,
+        elevation: 2,
+        position: 'relative'
     },
     textStyle: {
-        fontSize: 40
+        fontSize: 20
     }
 }
 

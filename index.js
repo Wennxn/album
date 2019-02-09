@@ -14,8 +14,9 @@
 
 // Import a library to help create a component
 import React from 'react';
-import { AppRegistry } from 'react-native';
-import Header from './src/components/header'
+import { AppRegistry, View } from 'react-native';
+import Header from './src/components/Header'
+import AlbumList from "./src/components/AlbumList"
 // react: know how a component shoud behave
         //knows how to take a bunch of component and make them work together
 // react-native: knows how to take the output form a component and place it on the screen
@@ -24,10 +25,16 @@ import Header from './src/components/header'
 
 // Create a component
 // note: we create a new file for each component
-const App = () => (
-    <Header />
-);
-
+// question: how does prop works? how does parent pass prob to the child?
+const App = () => {
+    return (
+        <View>
+            <Header headerText={"Albums"}/> 
+            <AlbumList /> 
+        </View>
+    );
+}
+//https://rallycoding.herokuapp.com/api/music_albums
 
 // Render it to the device
 
