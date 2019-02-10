@@ -27,12 +27,15 @@ class AlbumList extends Component {
     componentWillMount() {
         console.log("component will mount in albumlist");
         // debugger; // this would allow the program to stop at this point and let us debug
-        
+        fetch('https://rallycoding.herokuapp.com/api/music_albums')
+            .then((response) => response.json())
+            .then((data) => console.log(data));
     }
 
     // for class component, we define one method -> render
     // requirement for render method: it needs to return some amount of JSX
     render() {
+        console.log("render will mount in albumlist");
         return (
             <View>  
                 <Text>Album List!!!!!</Text>
