@@ -1,7 +1,8 @@
 import React from 'react';
 import { View, Text, Image } from 'react-native';
-import Card from './Card'
-import CardSection from "./CardSection"
+import Card from './Card';
+import CardSection from "./CardSection";
+import Button from "./Button";
 
 const AlbumDetail = ({album}) => {
     // destructure album and style
@@ -22,11 +23,16 @@ const AlbumDetail = ({album}) => {
                     <Text>{ artist }</Text>
                 </View>
             </CardSection>
+
             <CardSection>
                 <Image 
                     style={albumImageStyle}
                     source={{uri: image}}
                 />
+            </CardSection>
+            
+            <CardSection>
+                <Button/>
             </CardSection>
         </Card>
     );

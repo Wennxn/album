@@ -15,9 +15,10 @@ const Header = (props) => {
 
 // flexbox: used on positioning of elements in a container (ex. view)
     // in our case, how to place the text tag to the overall view tag
-    // properties: 'flex-start','center,'flex-end'
+    // properties: 'flex-start','center,'flex-end','space-between','space-around'
     // justifyContent: vertical position (top to bottom)
     // alignItems: horizontal position (left to right)
+    // flexDirection: 'column', 'row' 
 
 const styles = {
     viewStyle: {

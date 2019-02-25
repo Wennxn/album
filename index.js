@@ -28,7 +28,8 @@ import AlbumList from "./src/components/AlbumList"
 // question: how does prop works? how does parent pass prob to the child?
 const App = () => {
     return (
-        <View>
+        // for ScrollView, we must add flex:1 to the root View 
+        <View style={ {flex:1}} >
             <Header headerText={"Albums"}/> 
             <AlbumList /> 
         </View>
