@@ -1,14 +1,17 @@
 import React from 'react';
 import { Text, TouchableOpacity } from 'react-native';
 
-const Button = () => {
+const Button = ({pressHandler, children }) => {
+    // pressHandler is a function, this makes the button component reusable since
+    // we can keep the button component but replacing it's callback!
+
     const { buttonStyle, textStyle } = styles;
 
 
     return (
-        <TouchableOpacity style={buttonStyle}>
+        <TouchableOpacity onPress={pressHandler} style={buttonStyle}>
             <Text style={textStyle}>
-                Click me!!!!
+                {children}
             </Text>
         </TouchableOpacity>
     );
